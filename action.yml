@@ -1,0 +1,19 @@
+name: 'pack-chromium-extension'
+author: 'Emily McLean'
+description: 'Generates a signed .crx file, ready for distribution.'
+inputs:
+  input-folder:
+    description: 'The src folder of the extension'
+    required: true
+  output-file:
+    description: 'Where the resulting extension file should be written'
+    required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.input-folder }}
+    - ${{ inputs.output-file }}
+branding:
+  icon: 'cpu'
+  color: 'green'

@@ -1,0 +1,19 @@
+name: Test
+
+on:
+  pull_request:
+  push:
+    branches: [ master, main, develop ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - uses: BenMMcLean/pack-chromium-extension@v1
+        env:
+          EXTENSION_KEY: ${{ secrets.CHROME_SIGNING_KEY }}
+        with:
+          input-folder: test
+          output-file: extension.crx

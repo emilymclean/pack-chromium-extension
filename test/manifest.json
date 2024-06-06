@@ -1,0 +1,13 @@
+{
+    "manifest_version": 3,
+    "version": "1.0",
+    "name": "Test Extension",
+    "author": "Emily McLean",
+    "homepage_url": "https://github.com/BenMMcLean/pack-chromium-extension",
+    "theme": {
+      "images": {},
+      "properties": {},
+      "colors": {}
+    }
+  }
+  
