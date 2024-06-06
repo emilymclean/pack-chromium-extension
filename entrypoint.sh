@@ -9,6 +9,4 @@ chromium --no-sandbox --pack-extension=/extension --pack-extension-key=/key.pem
 
 rm /key.pem
 
-ls /
-
-mv extension.crx /github/workspace/$2
+mv /extension.crx /github/workspace/$2
