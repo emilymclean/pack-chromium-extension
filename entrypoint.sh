@@ -9,7 +9,8 @@ chromium --no-sandbox --pack-extension=/extension --pack-extension-key=/key.pem
 
 rm /key.pem
 
-chown runner /extension.crx
-chgrp docker /extension.crx
+chmod 644 /extension.crx
+# chown runner /extension.crx
+# chgrp docker /extension.crx
 
 mv /extension.crx /github/workspace/$2
