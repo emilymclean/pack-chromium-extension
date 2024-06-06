@@ -1,10 +1,8 @@
-FROM ubuntu:22.04
+FROM debian:trixie-slim
+
 
 RUN apt-get update && \
-    DEBIAN_FRONTEND=noninteractive TZ=Etc/UTC apt-get install -yqq chromium-browser snapd
-# Ugh
-RUN service snap start
-RUN snap install chromium
+    DEBIAN_FRONTEND=noninteractive TZ=Etc/UTC apt-get install -yqq chromium-browser
 
 COPY entrypoint.sh /entrypoint.sh
 
