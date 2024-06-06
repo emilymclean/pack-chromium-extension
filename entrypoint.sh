@@ -4,7 +4,7 @@ echo "$EXTENSION_KEY" > /key.pem
 
 cp /github/workspace/$1/* /extension
 
-chromium --pack-extension=/extension --pack-extension-key=/key.pem
+chromium --no-sandbox --pack-extension=/extension --pack-extension-key=/key.pem
 
 rm /key.pem
 
