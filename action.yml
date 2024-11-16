@@ -10,7 +10,7 @@ inputs:
     required: true
 runs:
   using: 'docker'
-  image: 'Dockerfile'
+  image: 'docker://ghcr.io/emilymclean/pack-chromium-extension-action:1.0.3'
   args:
     - ${{ inputs.input-folder }}
     - ${{ inputs.output-file }}
